@@ -2,11 +2,12 @@
 # September 02: Unique Binary Search Trees 2
 
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+     def __init__(self, val=0, left=None, right=None):
+         self.val = val
+         self.left = left
+         self.right = right
+         
 class Solution:
     def generateTrees(self, n: int) -> List[Optional[TreeNode]]:
         # Helper function
