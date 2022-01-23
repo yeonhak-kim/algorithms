@@ -1,4 +1,4 @@
-# Kakao Open Recruitment Question 1
+# Kakao Open Recruitment 2022 Question 1
 
 def solution(id_list, reports, k):
     # key=id : value=reporter

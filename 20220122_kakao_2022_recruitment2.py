@@ -1,4 +1,4 @@
-# Kakao Open Recruitment Question 1
+# Kakao Open Recruitment 2022 Question 2
 
 import math
 def solution(n, k):
