@@ -21,3 +21,18 @@ class Solution:
                 count += 1
         
         return val
+
+# cache
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        cache = {}
+        
+        for num in nums:
+            if num not in cache:
+                cache[num] = 1
+            else:
+                cache[num] += 1
+                
+            if cache[num] > len(nums) / 2: return num
+        
+        return None
