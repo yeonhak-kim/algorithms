@@ -1,5 +1,18 @@
 # Jump Game (leetcode)
 
+# Modified Top-Down
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        N = len(nums)
+        track = N - 1
+        
+        for idx in range(N - 2, -1, -1):
+            if idx + nums[idx] >= track:
+                track = idx
+            
+        return track == 0
+            
+
 # Top-Down (iterative version)
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
