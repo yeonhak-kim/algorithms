@@ -1,26 +1,26 @@
 # Sort Colors (leetcode)
 
 # Dutch National Flag Problem
-import heapq
 class Solution:
-    def minMeetingRooms(self, intervals: List[List[int]]) -> int:
-        # sort intervals
-        intervals.sort(key=lambda x:x[0])
-        # heap
-        free_rooms = [intervals[0][1]]
-        heapq.heapify(free_rooms)
-        # counter
-        last_end = intervals[0][1]
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        red_end, curr, blue_start = 0, 0, len(nums) - 1
         
-        for i in range(1, len(intervals)):
-            start, end = intervals[i]
-            if free_rooms[0] <= start:
-                heapq.heappop(free_rooms)
+        while curr <= blue_start:
+            if nums[curr] == 0:
+                # red
+                nums[red_end], nums[curr] = nums[curr], nums[red_end]
+                red_end += 1
+                curr += 1
             
-            heapq.heappush(free_rooms, end)
+            elif nums[curr] == 2:
+                # blue
+                nums[blue_start], nums[curr] = nums[curr], nums[blue_start]
+                blue_start -= 1
+            else:
+                curr += 1
         
-        return len(free_rooms)
-                    
         
-        
-        
+                
