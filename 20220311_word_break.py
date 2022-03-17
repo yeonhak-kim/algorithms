@@ -17,7 +17,7 @@ class Solution:
                 if ''.join(subword) in word_dict and i + 1 not in cache and search(i + 1):
                     return True
                 
-            cache.add(idx)
+            cache.add(idx) 
             return False
         
         # create hash map for the wordDict
